@@ -194,7 +194,6 @@ const correctAnswer = (students) => {
     startGame(students);
 }
 const endOfGame = () => {
-    console.log("game ended");
     gameEnd.style.display = 'block';
     endedGame.innerText = "End of game";
     if (total === 0 && finalScore === 0) {
@@ -202,10 +201,6 @@ const endOfGame = () => {
         finalScore = score;
         return;
     }
-    // if (finalScore === 0) {
-    //     finalScore = score;
-    //     return;
-    // }
 }
 
 const wrongAnswer = (students) => {
@@ -232,7 +227,6 @@ const startGame = (students) => {
         return next.name !== nameOf;
     })
 
-// ändrade map till forEach..
     answerButtons.forEach((choiceBtn) => {
         let incorrectAnswer = getNewStudent(nameOfStudent);
 
