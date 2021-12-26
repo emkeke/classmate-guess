@@ -197,14 +197,15 @@ const endOfGame = () => {
     console.log("game ended");
     gameEnd.style.display = 'block';
     endedGame.innerText = "End of game";
-    if (total === 0) {
+    if (total === 0 && finalScore === 0) {
         total = counter;
-        return;
-    }
-    if (finalScore === 0) {
         finalScore = score;
         return;
     }
+    // if (finalScore === 0) {
+    //     finalScore = score;
+    //     return;
+    // }
 }
 
 const wrongAnswer = (students) => {
@@ -257,7 +258,6 @@ const startAgain = () => {
     total = 0;
     startGame(students);
     totalScore.style.display = 'none';
-    // totalScore.classList.add('none');
     gameEnd.style.display = 'none';
 
 }
